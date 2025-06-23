@@ -1,0 +1,59 @@
+# === Backend (Java + Maven) ===
+
+# Maven build output
+/backend/target/
+/backend/out/
+
+# Maven dependency directory (usually not committed)
+/backend/.mvn/
+/backend/.settings/
+
+# IntelliJ IDEA files
+/backend/.idea/
+/backend/*.iml
+/backend/.classpath
+/backend/.project
+/backend/.settings/
+/backend/.vscode/
+
+/backend/logs/
+/backend/*.log
+
+# Eclipse files (if you use Eclipse)
+/backend/.metadata/
+/backend/.classpath
+/backend/.project
+/backend/.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# === Frontend (React) ===
+
+# node modules (huge folder, should NOT be committed)
+/frontend/node_modules/
+
+# Build output
+/frontend/build/
+/frontend/dist/
+/frontend/.cache/
+/frontend/.next/
+
+# dotenv environment variables
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.*.local
+
+# IDE/editor folders
+/frontend/.idea/
+/frontend/.vscode/
+
+# Logs
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
