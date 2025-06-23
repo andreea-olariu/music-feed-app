@@ -16,6 +16,9 @@
 /backend/.settings/
 /backend/.vscode/
 
+/backend/data
+
+
 /backend/logs/
 /backend/*.log
 
@@ -58,5 +61,5 @@ Thumbs.db
 .DS_Store
 Thumbs.db
 
-./data/.venv
+/data/.venv
 .idea
