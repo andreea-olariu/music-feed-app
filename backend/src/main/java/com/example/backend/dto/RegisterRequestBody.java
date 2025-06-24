@@ -11,4 +11,9 @@ public class RegisterRequestBody {
     private String password;
     private String firstname;
     private String lastname;
+
+
+    public String getPassword() {
+        return password;
+    }
 }

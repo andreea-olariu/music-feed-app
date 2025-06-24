@@ -5,9 +5,11 @@ import com.example.backend.dto.UsernameIdBody;
 import com.example.backend.exceptions.NonexistentUser;
 import com.example.backend.models.User;
 import com.example.backend.repositories.*;
+import com.example.backend.utils.Hasher;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -20,8 +22,10 @@ public class UsersService {
         this.usersRepository = usersRepository;
     }
 
-    public void saveUser(RegisterRequestBody registerRequestBody) {
-        User user = new User(registerRequestBody);
+    public void saveUser(RegisterRequestBody registerRequestBody)  throws NoSuchAlgorithmException {
+        String password = registerRequestBody.getPassword();
+        String hashedPassword = Hasher.sha256(password);
+        User user = new User(registerRequestBody, hashedPassword);
         usersRepository.save(user);
     }
 

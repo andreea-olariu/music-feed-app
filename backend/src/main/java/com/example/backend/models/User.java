@@ -28,11 +28,15 @@ public class User extends MusicInfoForUser {
     private String firstname;
     private String lastname;
 
-    public User(RegisterRequestBody registerRequestBody) {
+    public User(RegisterRequestBody registerRequestBody, String hashedPassword) {
         this.email = registerRequestBody.getEmail();
         this.username = registerRequestBody.getUsername();
-        this.password = registerRequestBody.getPassword();
+        this.password = hashedPassword;
         this.firstname = registerRequestBody.getFirstname();
         this.lastname = registerRequestBody.getLastname();
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
